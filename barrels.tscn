@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://bwtm0gtiio43v"]
+
+[ext_resource type="Texture2D" uid="uid://biecb48uiksu4" path="res://Main Characters/Create_2D_barrel_roll_tilemap_44be52c8_2K-removebg-preview.png" id="1_1gic5"]
+[ext_resource type="Script" uid="uid://dokbtybcppck5" path="res://barrels.gd" id="1_2o06s"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2o06s"]
+atlas = ExtResource("1_1gic5")
+region = Rect2(0, 113, 83, 113)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cnrxk"]
+atlas = ExtResource("1_1gic5")
+region = Rect2(83, 113, 83, 113)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kf3gn"]
+atlas = ExtResource("1_1gic5")
+region = Rect2(166, 113, 83, 113)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t2j43"]
+atlas = ExtResource("1_1gic5")
+region = Rect2(249, 113, 83, 113)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4ekwy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2o06s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cnrxk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kf3gn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t2j43")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4ekwy"]
+radius = 20.024984
+
+[node name="Barrels" type="Area2D" unique_id=601455071]
+collision_layer = 4
+collision_mask = 3
+script = ExtResource("1_2o06s")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1584718753]
+sprite_frames = SubResource("SpriteFrames_4ekwy")
+autoplay = "default"
+frame_progress = 0.79690206
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=667334269]
+shape = SubResource("CircleShape2D_4ekwy")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

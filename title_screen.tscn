@@ -1,0 +1,91 @@
+[gd_scene format=3 uid="uid://b8y7dd5itfa1i"]
+
+[ext_resource type="Script" uid="uid://do3c8klutomjs" path="res://title_screen.gd" id="1_05l2w"]
+[ext_resource type="FontFile" uid="uid://dr201ov4c76pb" path="res://fonts/Crackman.otf" id="1_ig5kc"]
+[ext_resource type="Texture2D" uid="uid://bhahyhees1q1k" path="res://Main Characters/Pink Man/Fall (32x32).png" id="2_05l2w"]
+[ext_resource type="FontFile" uid="uid://hqpa84d2dqvp" path="res://fonts/Better VCR 9.0.1.ttf" id="3_hafda"]
+
+[node name="TitleScreen" type="Control" unique_id=2095194516]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_05l2w")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1832643035]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.3878836, 0.6358665, 0.82210624, 1)
+
+[node name="Label" type="Label" parent="." unique_id=1627013042]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.275
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -173.0
+offset_top = -70.5
+offset_right = 173.0
+offset_bottom = 70.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_ig5kc")
+theme_override_font_sizes/font_size = 100
+text = "unpaid stuntman
+"
+horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=567928151]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -102.5
+offset_top = -103.5
+offset_right = 102.5
+offset_bottom = 103.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_05l2w")
+
+[node name="Label2" type="Label" parent="." unique_id=850346488]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.763
+anchor_right = 0.5
+anchor_bottom = 0.763
+offset_left = -225.0
+offset_top = -25.0
+offset_right = 225.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_hafda")
+theme_override_font_sizes/font_size = 40
+text = "High Score: 0"
+
+[node name="Label3" type="Label" parent="." unique_id=1880494592]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.957
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -91.5
+offset_top = -23.0
+offset_right = 91.5
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("3_hafda")
+theme_override_font_sizes/font_size = 19
+text = "Cooked by: Alpha & Omega"
